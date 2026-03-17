@@ -1,11 +1,11 @@
 FROM alpine
 
-RUN apk add gcc make git linux-headers musl-dev
+RUN apk add --no-cache gcc make musl-dev
 
-WORKDIR /danger
+WORKDIR /app
 
-COPY ./src .
+COPY . .
 
 RUN make
 
-CMD ./O-n^2-Adder, 100000, 10000
+CMD ["./O-n^2-Adder", "100000", "10000"]
